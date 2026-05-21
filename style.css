@@ -89,7 +89,6 @@ body {
 /* 图片和音频控件 */
 .demo-table img {
     width: 100%;
-    max-width: 250px;
     height: auto;
     display: block;
     margin-bottom: 10px;
