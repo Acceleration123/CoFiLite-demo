@@ -114,3 +114,64 @@ audio {
     font-size: 14px; /* 字体大小，可根据需要调整 */
     line-height: 1.5; /* 行高，增加可读性 */
 }
+
+.sample-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 30px 0 15px 0;
+    padding-left: 12px;
+    border-left: 4px solid #4CAF50;
+}
+
+/* 消融实验卡片 - 继承 demo-card 的白底圆角阴影风格 */
+.ablation-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+/* 每一行（表头行或内容行）都用 Grid 强制排成 3 列 */
+.ablation-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 表头单元格 - 继承 demo-table th 的绿色风格 */
+.ablation-row.header-row > div {
+    background-color: #5bb95f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: normal;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* 内容单元格 - 继承 demo-table td 的边框和居中 */
+.ablation-row.content-row > div {
+    padding: 15px;
+    text-align: center;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* 去掉每行最右侧多余的右边框 */
+.ablation-row > div:last-child {
+    border-right: none;
+}
+
+/* 图片和音频控件 - 与现有 demo-table 完全一致 */
+.ablation-row.content-row img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 4px;
+}
+
+.ablation-row.content-row audio {
+    width: 100%;
+}
