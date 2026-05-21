@@ -174,3 +174,15 @@ audio {
 .ablation-row.content-row audio {
     width: 100%;
 }
+
+.ablation-row.content-row img.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+    max-height: 90vh;
+    z-index: 1000;
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.8);
+    cursor: zoom-out;
+}
