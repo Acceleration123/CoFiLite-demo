@@ -164,11 +164,13 @@ audio {
 /* 图片和音频控件 - 与现有 demo-table 完全一致 */
 .ablation-row.content-row img {
     width: 100%;
-    max-width: 250px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px auto;
+    max-width: none;       /* 取消 250px 的限制 */
+    height: 180px;         /* 统一高度，所有图一样大 */
+    object-fit: cover;     /* 保持比例，多余部分自动裁剪 */
+    object-position: center; /* 裁剪时以中心为准 */
     border-radius: 4px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 .ablation-row.content-row audio {
