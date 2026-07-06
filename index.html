@@ -23,6 +23,84 @@
     <!-- 主要内容区域 -->
     <main class="container">
 
+    <!-- 新增：模型复杂度明细表 -->
+    <section class="section-complexity">
+        <h2>Model Complexity Breakdown</h2>
+        <p class="section-desc">Detailed breakdown of parameters and MACs/s for core modules in CoFi-Lite.</p>
+
+        <div class="demo-card" style="display: flex; justify-content: center; padding: 20px; overflow-x: auto;">
+            <table style="text-align: center; border-collapse: collapse; min-width: 600px; font-family: serif; font-size: 16px;">
+                <thead>
+                    <tr style="border-top: 2px solid #000; border-bottom: 1px solid #000;">
+                        <th style="padding: 10px 15px;">Module</th>
+                        <th style="padding: 10px 15px;">Params (k)</th>
+                        <th style="padding: 10px 15px;">Params (%)</th>
+                        <th style="padding: 10px 15px;">MACs/s (M)</th>
+                        <th style="padding: 10px 15px;">MACs (%)</th>
+                    </tr>
+                </thead>
+                <tbody style="border-bottom: 2px solid #000;">
+                    <tr>
+                        <td style="padding: 8px 15px;">Coarse Encoder</td>
+                        <td>7.04</td>
+                        <td>8.47%</td>
+                        <td>1.91</td>
+                        <td>14.84%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px 15px;">Fine Encoder</td>
+                        <td>2.19</td>
+                        <td>2.63%</td>
+                        <td>0.65</td>
+                        <td>5.05%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px 15px;">CPF</td>
+                        <td>63.91</td>
+                        <td>76.89%</td>
+                        <td>4.06</td>
+                        <td>31.55%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px 15px;">Four Inter-RNNs</td>
+                        <td>2.38</td>
+                        <td>2.86%</td>
+                        <td>2.15</td>
+                        <td>16.71%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px 15px;">Coarse Decoder</td>
+                        <td>6.24</td>
+                        <td>7.51%</td>
+                        <td>1.76</td>
+                        <td>13.67%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px 15px;">Fine Decoder</td>
+                        <td>1.36</td>
+                        <td>1.64%</td>
+                        <td>0.38</td>
+                        <td>2.95%</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #000;">
+                        <td style="padding: 8px 15px;">Other Matrix Operations</td>
+                        <td>0.00</td>
+                        <td>0.00%</td>
+                        <td>1.96</td>
+                        <td>15.23%</td>
+                    </tr>
+                    <tr style="font-weight: bold;">
+                        <td style="padding: 12px 15px;">Total</td>
+                        <td>83.12</td>
+                        <td>100.00%</td>
+                        <td>12.87</td>
+                        <td>100.00%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <!-- 第一块: 与基线模型对比-->
         <section class="section-baseline">
             <h2>Comparison with Baselines</h2>
