@@ -188,3 +188,42 @@ audio {
     box-shadow: 0 0 0 9999px rgba(0,0,0,0.8);
     cursor: zoom-out;
 }
+
+/* 容器居中及间距 */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* 按钮之间的间距 */
+    margin: 30px 0;
+}
+
+/* 按钮基础样式 */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none; /* 去除下划线 */
+    border-radius: 8px; /* 圆角略微调大显得更现代 */
+    transition: all 0.3s ease; /* 过渡动画 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 投影让按钮浮起来 */
+}
+
+/* Code按钮的独立配色 (仿GitHub暗色) */
+.btn-code {
+    background-color: #24292e;
+    color: #ffffff;
+}
+
+/* ArXiv按钮的独立配色 (可以是稍微深一点的主题绿或红色) */
+.btn-arxiv {
+    background-color: #B31B1B; /* ArXiv经典的暗红色 */
+    color: #ffffff;
+}
+
+/* 鼠标悬停(Hover)时的动画效果 */
+.btn:hover {
+    transform: translateY(-3px); /* 向上浮动一点点 */
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15); /* 阴影加深 */
+    color: #ffffff; /* 确保文字依然是白色 */
+}
